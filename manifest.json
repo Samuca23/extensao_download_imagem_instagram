@@ -4,8 +4,8 @@
     "version": "1.0",
     "description": "Download de imagens do Instagram",
     "icons": {
-        "48": "img/logo_unidavi.png",
-        "128": "img/logo_unidavi.png"
+        "48": "logo_instagram.png",
+        "128": "logo_instagram.png"
     },
     "background": {
         "scripts": ["src/background.js"],
@@ -14,20 +14,20 @@
     "options_page": "src/pages/option.html",
     "browser_action": {
         "default_icon": {
-            "19": "img/logo_unidavi.png",
-            "38": "img/logo_unidavi.png"
+            "19": "logo_instagram.png",
+            "38": "logo_instagram.png"
         },
-        "default_title": "Atalhos - Unidavi",
+        "default_title": "Download Imagem - Instagram",
         "default_popup": "index.html"
     },
     "content_script": [
         {
             "js": [
+                "src/components/button_dowload.js",
                 "src/main.js"
             ],
             "matches": [
-                "*://*/*",
-                "<all_urls>"
+                "https://www.instagram.com/*"
             ]
         }
     ]
